@@ -3,7 +3,7 @@ import axios from 'axios'
 // axios 配置
 axios.defaults.timeout = 5000
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'
-// axios.defaults.baseUrl="localhost"
+axios.defaults.baseUrl = ''
 
 export default {
   // 获取试卷库列表
@@ -35,6 +35,19 @@ export default {
             }
           }
           resolve(response)
+        })
+        .catch(error => {
+          reject(error.response)
+        })
+    })
+  },
+  // 获取整份试卷详情
+  PaperDetail () {
+    return new Promise((resolve, reject) => {
+      axios.post('/tr/api/paper/showPaperInfo?paperId=1&displayType=1')
+        .then(response => {
+          console.log('/tr/api/paper/showPaperInfo?paperId=1&displayType=1')
+          resolve(response.data)
         })
         .catch(error => {
           reject(error.response)

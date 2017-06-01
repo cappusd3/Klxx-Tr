@@ -9,8 +9,17 @@ import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 import store from './vuex/store'
 
-// Vue.use(ElementUI)
+// Vue.use(iView)
 Vue.use(iView)
+
+// custome directive global ?where is the correct space?
+// Vue.directive('latex', {
+//   bind (el, binding) {},
+//   inserted (el, binding) {},
+//   update (el, binding, vnode, oldVnode) {},
+//   componentUpdated () {},
+//   unbind () {}
+// })
 
 Vue.config.productionTip = false
 /* eslint-disable no-new */

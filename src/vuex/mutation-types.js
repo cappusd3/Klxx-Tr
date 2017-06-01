@@ -12,3 +12,4 @@ export const GET_QUESTION_BANK_LIST = 'GET_QUESTION_BANK_LIST' // 获取题库�
 
 // paper 试卷库
 export const GET_PAPER_LIST = 'GET_PAPER_LIST' // 试卷库列表
+export const GET_PAPER_DETAIL = 'GET_PAPER_DETAIL' // 试卷详情

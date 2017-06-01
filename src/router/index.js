@@ -9,6 +9,7 @@ import QuestionBankIndex from '@/pages/question-bank/index.vue'
 import AddQuestion from '@/pages/question-bank/add.vue'
 import PaperIndex from '@/pages/paper/index.vue'
 import AddPaper from '@/pages/paper/add.vue'
+import previewPaper from '@/pages/paper/preview.vue'
 
 Vue.use(Router)
 
@@ -42,6 +43,10 @@ export default new Router({
       path: '/paper/add',
       name: 'paperAdd',
       component: AddPaper
+    }, {
+      path: '/paper/preview',
+      name: 'paperPreview',
+      component: previewPaper
     }
   ]
 })

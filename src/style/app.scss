@@ -53,6 +53,7 @@ li {
   display: flex;
 
   .layout-content {
+    overflow-y: auto;
     margin-top: 5rem;
     display: -webkit-box;
     display: -moz-box;
@@ -65,6 +66,7 @@ li {
     flex: 1;
 
     .layout-body {
+      overflow-y: auto;
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -82,6 +84,7 @@ li {
     }
 
     .wrapper-content {
+      overflow-y: auto;
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -91,7 +94,7 @@ li {
       -moz-box-flex: 1;
       -ms-flex: 1;
       flex: 1;
-      padding: 20px 25px;
+      padding: 20px 5px;
       position: relative;
 
       &:after {
@@ -102,7 +105,7 @@ li {
         position: absolute;
         top: 0;
         bottom: 0;
-        left: -1px
+        left: 0
       }
     }
   }

@@ -28,16 +28,21 @@
       Row.sub-panel(type="flex" justify="start" align="bottom")
         Col(span="6" offset="2")
           Form-item(label="")
-            Upload(action="//jsonplaceholder.typicode.com/posts/")
-              Button(type="ghost" icon="ios-cloud-upload-outline") 上传tex源文件
-      Row.sub-panel(type="flex" justify="start" align="bottom")
-        Col(span="20" offset="2")
-          Form-item(label="试卷图片(png格式)")
-            images-upload(ref="uploadImagesList")
-      Row.sub-panel(type="flex" justify="start" align="bottom")
-        Col(span="6" offset="2")
-          Form-item
-            Button(type="primary" @click="handleSubmit('formValidate')") 解析
+            Upload(multiple action="//jsonplaceholder.typicode.com/posts/")
+              Button(type="ghost" icon="ios-cloud-upload-outline") 上传文件解析
+      //- Row.sub-panel(type="flex" justify="start" align="bottom")
+      //-   Col(span="6" offset="2")
+      //-     Form-item(label="")
+      //-       Upload(action="//jsonplaceholder.typicode.com/posts/")
+      //-         Button(type="ghost" icon="ios-cloud-upload-outline") 上传tex源文件
+      //- Row.sub-panel(type="flex" justify="start" align="bottom")
+      //-   Col(span="20" offset="2")
+      //-     Form-item(label="试卷图片(png格式)")
+      //-       images-upload(ref="uploadImagesList")
+      //- Row.sub-panel(type="flex" justify="start" align="bottom")
+      //-   Col(span="6" offset="2")
+      //-     Form-item
+      //-       Button(type="primary" @click="handleSubmit('formValidate')") 解析
     //- 这里是解析成功后的列表
     .paper-compiled-list(style="margin-top: 1rem;")
       p 这里是解析成功列表1
@@ -53,13 +58,13 @@
 
 <script>
 import breadcrumb from '@/components/Breadcrumb.vue'
-import imagesUpload from '@/components/ImagesUpload.vue'
+// import imagesUpload from '@/components/ImagesUpload.vue'
 import trTable from '@/components/Table.vue'
 
 import { mapGetters } from 'vuex'
 
 export default {
-  components: {breadcrumb, imagesUpload, trTable},
+  components: {breadcrumb, trTable},
   created () {
     this.$store.dispatch('getSubjectInfo')
     this.$store.dispatch('getPeriodInfo')

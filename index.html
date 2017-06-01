@@ -3,7 +3,29 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>vue-project2</title>
+    <title>教研平台</title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            showProcessingMessages: false,
+            messageStyle: "none",
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            "showMathMenu": false,
+            "HTML-CSS": {
+                availableFonts: ["STIX","TeX"],
+                showMathMenu: false
+            },
+            "fast-preview": {
+                "disabled": true
+            }
+        });
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    </script>
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body>
